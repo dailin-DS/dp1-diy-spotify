@@ -12,7 +12,7 @@ app.debug = True
 # --- CONFIGURATION (NO CHANGES NEEDED HERE) ---
 S3_BUCKET = 'esd4uq-dp1-spotify'
 s3 = boto3.client('s3')
-baseurl = 'http://esd4uq-dp1-spotify.s3-website-us-east-1.amazonaws.com'
+baseurl='https://esd4uq-dp1-spotify.s3.us-east-1.amazonaws.com'
 DBHOST = os.getenv('DBHOST')
 DBUSER = os.getenv('DBUSER')
 DBPASS = os.getenv('DBPASS')
