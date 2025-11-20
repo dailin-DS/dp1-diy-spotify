@@ -3,8 +3,6 @@ import json
 import mysql.connector
 import boto3
 from chalice import Chalice
-# You don't need dotenv in Lambda, variables come from config.json
-# from dotenv import load_dotenv 
 
 app = Chalice(app_name='ingestor')
 app.debug = True

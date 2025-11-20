@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-DBHOST = "database-1.c6zeoiy22gcj.us-east-1.rds.amazonaws.com"
+DBHOST = "diy-spotify-new.c6zeoiy22gcj.us-east-1.rds.amazonaws.com"
 DBUSER = "admin"
 DBPASS = os.getenv("DBPASS")
 DB = "esd4uq"
