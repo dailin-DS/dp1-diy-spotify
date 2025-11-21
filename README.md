@@ -1,12 +1,9 @@
-Here is the complete Markdown content. You can copy the code block below and paste it directly into your `README.md` file.
-
-````markdown
 # Cloud-Native DIY Spotify 🎵 ☁️
 
 A full-stack, event-driven music streaming application built on AWS. This project demonstrates a serverless ingestion pipeline, containerized backend services, and a managed relational database to create a scalable Spotify clone.
 
 ### 📺 [Watch the Demo Video](https://youtu.be/hJJ_HMDzN2w)
-
+### ☁️ [Dockerization](https://github.com/dylanlidailin/fastapi-demo)
 ---
 
 ## 🏗️ Architecture
@@ -50,7 +47,7 @@ flowchart TD
     style EC2 fill:#ff9900,stroke:#232f3e,color:white
     style Lambda fill:#ff9900,stroke:#232f3e,color:white
     style RDS fill:#3355da,stroke:#232f3e,color:white
-````
+```
 
 ### Tech Stack
 
@@ -78,8 +75,6 @@ Follow these steps to deploy your own version of this project.
 1.  Create a **MySQL** database instance in Amazon RDS (Free Tier is sufficient).
 2.  Ensure your Security Group allows traffic on port `3306` from your IP and your future EC2 instance.
 3.  Connect to the database and run the following SQL to create the schema:
-
-<!-- end list -->
 
 ```sql
 CREATE DATABASE music_db;
@@ -171,7 +166,7 @@ This function automatically adds songs to the database when files are uploaded t
 2.  Find the `url` variable in the script section and update it to your API's address:
     ```javascript
     // Example: EC2 Public IP
-    url = "[http://12.34.56.78/songs](http://12.34.56.78/songs)";
+    url = "http://12.34.56.78/songs";
     ```
 3.  Upload `index.html` to the root of your S3 bucket.
 
@@ -194,9 +189,4 @@ To add music to your library, you do **not** need to touch the database manually
     ```
 3.  **Upload these 3 files to your S3 bucket.**
 4.  The Lambda function will trigger automatically, parse the JSON, and insert the record into RDS.
-5.  Refresh your website to see the new track\!
-
-<!-- end list -->
-
-```
-```
+5.  Refresh your website to see the new track!
